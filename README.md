@@ -1,2 +1,24 @@
-# StringCalculator
-The StringCalculator is a utility to parse and sum numbers from a string with support for custom delimiters, handling newlines, and validation to prevent negative inputs. It raises detailed exceptions for negative values and ensures flexibility with various input formats
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
