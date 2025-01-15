@@ -36,11 +36,12 @@ module StringCalculator
 
       parsed_numbers = input
       if input.start_with?("//")
+        update(input: input.gsub(/(?<!\/\/.)\n/, input.match(%r{//(.)\n})[1]))
         custom_delimiter, parsed_numbers = parse_custom_delimiter
-        delimiter = Regexp.escape(custom_delimiter)
+        delimiter = Regexp.escape(custom_delimiter) # Escape custom delimiter for regex
       end
 
-      @numbers ||= parsed_numbers.split(/#{delimiter}/).map(&:to_i)
+      @numbers ||= parsed_numbers.split(/#{delimiter}|,|\n/).map(&:to_i)
       validate_numbers
       @numbers
     end
