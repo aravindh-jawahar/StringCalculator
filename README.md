@@ -57,3 +57,11 @@ input specifies the input data to process
 1. Ruby - "3.1.2"
 2. Rails - "7.1.5"
 3. Postgresql >= 9.3
+
+
+**Steps to run app:**
+
+
+1. rails db:create
+2. rails db:migrate
+3. rails s -p 3000
