@@ -10,8 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_15_095701) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "calculators", force: :cascade do |t|
+    t.string "input", null: false
+    t.string "variant", null: false
+    t.string "operation", null: false
+    t.decimal "result"
+    t.jsonb "meta_data", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["operation"], name: "index_calculators_on_operation"
+    t.index ["variant"], name: "index_calculators_on_variant"
+  end
 
 end
