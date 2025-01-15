@@ -1,4 +1,5 @@
 class Calculator < ApplicationRecord
+  validates :variant, :input, :operation, presence: true
 
   delegate :perform!, to: :becomes_specific_calculator
 

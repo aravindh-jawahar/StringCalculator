@@ -54,7 +54,6 @@ module StringCalculator
     end
 
     def parse_custom_delimiter
-      binding.pry
       match = input.match(%r{//(.+)\n(.*)})
       [match[1], match[2]]
     end

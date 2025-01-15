@@ -40,6 +40,10 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem 'pry'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rspec_junit_formatter', require: false
+  gem 'rspec-sidekiq'
+  gem 'shoulda-matchers'
 end
 
 group :development do
