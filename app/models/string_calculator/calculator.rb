@@ -27,7 +27,8 @@ module StringCalculator
 
     def validate_numbers
       # Handle negatives
-      raise "Negative input not allowed: #{@numbers}" if has_negatives?
+      negatives = @numbers.select(&:negative?) # Extract negative numbers
+      raise "Negative input not allowed: #{negatives.join(', ')}" if negatives.any?
     end
 
     def extract_numbers
